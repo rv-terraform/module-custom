@@ -14,14 +14,18 @@ module mycompute {
     vnet_subnet_id = "${module.network.vnet_subnets[0]}"
     storage_account_type = "Standard_LRS"
     vm_size = "Standard_DS1_V2"
-    tags = "${var.environment}"
+    tags {
+        environment = "${var.environment}"
+    }
 }
 
 module "network" {
     source = "Azure/network/azurerm"
     location = "${var.location}"
     resource_group_name = "${var.resource_group_name}"
-    tags = "${var.environment}"
+    tags {
+        environment = "${var.environment}"
+    }
 }
 
 output "vm_public_name" {
