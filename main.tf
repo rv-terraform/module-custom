@@ -4,7 +4,6 @@ module mycompute {
     location = "${var.location}"
     admin_username = "${var.adminuser}"
     remote_port = "22"
-    public_ip_address_allocation = "dynamic"
     public_ip_dns = ["venerari03"]
     vnet_subnet_id = "${module.network.vnet_subnets[0]}"
     vm_os_simple = "RedHat"
