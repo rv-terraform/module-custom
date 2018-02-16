@@ -15,7 +15,7 @@ module mycompute {
     storage_account_type = "Standard_LRS"
     vm_size = "Standard_DS1_V2"
     tags {
-        environment = "${var.environment}"
+        environment = "${var.env}"
     }
 }
 
@@ -24,7 +24,7 @@ module "network" {
     location = "${var.location}"
     resource_group_name = "${var.resource_group_name}"
     tags {
-        environment = "${var.environment}"
+        environment = "${var.env}"
     }
 }
 
