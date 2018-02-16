@@ -4,6 +4,7 @@ module mycompute {
     location = "${var.location}"
     admin_username = "${var.adminuser}"
     remote_port = "22"
+    nb_instances = 1
     public_ip_dns = ["venerari03"]
     vnet_subnet_id = "${module.network.vnet_subnets[0]}"
     vm_os_simple = "RedHat"
@@ -12,7 +13,6 @@ module mycompute {
     storage_account_type = "Standard_LRS"
     ssh_key = "~/.ssh/id_rsa.pub"
     vm_size = "Standard_DS1_V2"
-    nb_instances = 1
     tags {
         environment = "${var.env}"
     }
