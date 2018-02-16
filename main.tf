@@ -4,7 +4,7 @@ mmodule mycompute {
     location = "${var.location}"
     admin_username = "${var.adminuser}"
     ssh_key = "~/.ssh/id_rsa.pub"
-    vm_os_simple = "CentOS"
+    vm_os_simple = "RedHat"
     remote_port = "22"
     nb_instances = 1
     public_ip_address_allocation = "dynamic"
