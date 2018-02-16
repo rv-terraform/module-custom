@@ -6,7 +6,6 @@ module mycompute {
     remote_port = "22"
     nb_instances = 1
     vm_size = "Standard_DS1_V2"
-    public_ip_address_allocation = "dynamic"
     public_ip_dns = ["venerari03"]
     vnet_subnet_id = "${module.network.vnet_subnets[0]}"
     vm_os_simple = "RedHat"
