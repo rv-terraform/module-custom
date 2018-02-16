@@ -9,6 +9,10 @@ variable resource_group_name {
     default = "myRG1"
 }
 
+variable environment {
+    default = "Development"
+}
+
 variable adminuser {
     default = "venerari"
 }
