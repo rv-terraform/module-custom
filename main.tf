@@ -13,16 +13,12 @@ module mycompute {
     vm_os_sku    = "7-RAW"
     storage_account_type = "Standard_LRS"
     ssh_key = "~/.ssh/id_rsa.pub"
-    tags {
-        environment = "${var.env}"
-    }
+  
 }
 
 module "network" {
     source = "Azure/network/azurerm"
     location = "${var.location}"
     resource_group_name = "${var.resource_group_name}"
-    tags {
-        environment = "${var.env}"
-    }
+    
 }
