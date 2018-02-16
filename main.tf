@@ -32,9 +32,9 @@ output "vm_public_name" {
     value = "${module.mycompute.public_ip_dns_name}"
 }
 
-#output "vm_public_ip" {
-#    value = "${module.mycompute.public_ip_address}"
-#}
+output "vm_public_ip" {
+    value = "${module.mycompute.public_ip_address}"
+}
 
 output "vm_private_ips" {
     value = "${module.mycompute.network_interface_private_ip}"
